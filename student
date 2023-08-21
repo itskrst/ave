@@ -1,0 +1,65 @@
+package c2;
+
+public class Student {
+
+	String firstName, lastName, section, course, schoolYear;
+ 	double midtermGrade, finalGrade;
+ 	
+ 	
+ 	double result = 0;
+ 	
+ 	Student (String first_name, String last_Name, String year, String crse, String sec,
+ 			double midGrade, double finalG){
+ 		
+ 		this.firstName = first_name;
+ 		this.lastName = last_Name;
+ 		this.section = sec;
+ 		this.schoolYear = year;
+ 		this.course = crse;
+ 		this.midtermGrade = midGrade;
+ 		this.finalGrade = finalG;
+ 		
+ 	}
+ 	
+ 	void introduceSelf(){
+ 		System.out.println("\nFull name: " + firstName + " " + lastName);
+ 		System.out.println("Year: " + schoolYear);
+ 		System.out.println("Course: " + course);
+ 		System.out.println("Section: " + section);
+ 		
+ 	}
+ 	
+ 	void evaluateGrade() {
+ 		
+ 		
+ 		result = (midtermGrade + finalGrade) / 2;
+ 		
+ 		System.out.println("Final Average: " + result);
+ 		
+ 		if (result >= 98) {
+ 			System.out.println("Congratulations! You are with Highest Honors!");
+ 		}
+ 		
+ 		else if (result >= 95) {
+ 			System.out.println("Congratulations! You are with High Honors!");
+ 		}
+ 		
+ 		else if (result >= 90) {
+ 			System.out.println("Congratulations! You are with Honors!");
+ 		}
+ 		
+ 		else if (result >= 75) {
+ 			System.out.println("Congratulations! You passed!");
+ 		}
+ 		
+ 		else if (result < 75) {
+ 			System.out.println("You failed.");
+ 		}
+ 		
+ 		else {
+ 			System.out.print("Invalid.");
+ 		}
+ 	}
+ 	
+ 	
+}
