@@ -1,0 +1,65 @@
+package c2;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		/*
+		 Create a class Student that has the attributes:
+		 	firstName
+		 	lastName
+		 	year
+		 	course
+		 	section
+		 	midtermGrade
+		 	finalGrade
+		 */
+
+		// Create a constructor for the class.
+		
+		/*
+		 introduceSelf()
+		 	- Outputs the Full Name, Course Year, and Section of the student.
+		 	
+		 evaluateGrade()
+		 	- Average the Midterm and Final Grade output their average and their standing if 
+		 	  they are an honor, passed, or failed.
+		 */
+
+
+
+   
+		
+		Scanner s = new Scanner (System.in);
+		
+		System.out.print("Enter First Name: ");
+		String inputFirstN = s.nextLine();
+		
+		System.out.print("Enter Last Name: ");
+		String inputLastN = s.nextLine();
+		
+		System.out.print("Enter Year: ");
+		String inputYear = s.nextLine();
+		
+		System.out.print("Enter Course: ");
+		String inputCourse = s.nextLine();
+		
+		System.out.print("Enter Section: ");
+		String inputSection = s.nextLine();
+		
+		System.out.print("Enter Midterms Grade: ");
+		double midG = s.nextDouble();	
+		
+		System.out.print("Enter Finals Grade: ");
+		double finals = s.nextDouble();
+		
+		
+		Student x = new Student(inputFirstN, inputLastN, inputYear, inputCourse, inputSection, midG, finals);
+		
+		x.introduceSelf();
+		x.evaluateGrade();
+	}
+	
+
+}
