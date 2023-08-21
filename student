@@ -5,8 +5,8 @@ public class Student {
 	String firstName, lastName, section, course, schoolYear;
  	double midtermGrade, finalGrade;
  	
- 	
  	double result = 0;
+
  	
  	Student (String first_name, String last_Name, String year, String crse, String sec,
  			double midGrade, double finalG){
@@ -36,7 +36,11 @@ public class Student {
  		
  		System.out.println("Final Average: " + result);
  		
- 		if (result >= 98) {
+ 		if (result > 100) {
+ 			System.out.println("Invalid.");
+ 		}
+ 		
+ 		else if (result >= 98) {
  			System.out.println("Congratulations! You are with Highest Honors!");
  		}
  		
